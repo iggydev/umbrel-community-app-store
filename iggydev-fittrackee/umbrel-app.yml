@@ -2,7 +2,7 @@ manifestVersion: 1
 id: iggydev-fittrackee
 name: FitTrackee
 tagline: Self-hosted outdoor activity tracker
-icon: https://raw.githubusercontent.com/SamR1/FitTrackee/main/fittrackee_client/public/icons/icon-512.png
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/fittrackee.svg
 category: Fitness
 version: "1.3.5"
 port: 5000
@@ -17,7 +17,7 @@ submission: https://github.com/iggydev/umbrel-community-app-store
 repo: https://github.com/SamR1/FitTrackee
 support: https://github.com/SamR1/FitTrackee/issues
 gallery:
-  - https://raw.githubusercontent.com/SamR1/FitTrackee/main/fittrackee_client/public/icons/icon-512.png
+  - https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/fittrackee.svg
 releaseNotes: >-
   Initial Umbrel community app integration using FitTrackee 1.3.5.
 dependencies: []
