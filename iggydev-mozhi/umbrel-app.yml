@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: iggydev-mozhi
+name: Mozhi
+tagline: Privacy-friendly translation frontend
+icon: https://codeberg.org/aryak/mozhi/raw/branch/main/public/favicon.svg
+category: Utilities
+version: "1.0.0"
+port: 5555
+description: >-
+  Mozhi is a translation frontend with support for multiple translation
+  services and a simple web interface.
+developer: Aryak
+website: https://codeberg.org/aryak/mozhi
+submitter: IggyDev
+submission: https://github.com/iggydev/umbrel-community-app-store
+repo: https://codeberg.org/aryak/mozhi
+support: https://codeberg.org/aryak/mozhi/issues
+gallery:
+  - https://codeberg.org/aryak/mozhi/raw/branch/main/public/favicon.svg
+releaseNotes: >-
+  Initial Umbrel community app integration.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
