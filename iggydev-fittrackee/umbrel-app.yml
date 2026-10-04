@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: iggydev-fittrackee
+name: FitTrackee
+tagline: Self-hosted outdoor activity tracker
+icon: https://raw.githubusercontent.com/SamR1/FitTrackee/main/fittrackee_client/public/icons/icon-512.png
+category: Fitness
+version: "1.3.5"
+port: 5000
+description: >-
+  FitTrackee is a self-hosted outdoor activity tracker for GPX workouts,
+  routes and statistics. This Umbrel app includes the FitTrackee web
+  application and its required PostGIS database.
+developer: SamR1
+website: https://docs.fittrackee.org/
+submitter: IggyDev
+submission: https://github.com/iggydev/umbrel-community-app-store
+repo: https://github.com/SamR1/FitTrackee
+support: https://github.com/SamR1/FitTrackee/issues
+gallery:
+  - https://raw.githubusercontent.com/SamR1/FitTrackee/main/fittrackee_client/public/icons/icon-512.png
+releaseNotes: >-
+  Initial Umbrel community app integration using FitTrackee 1.3.5.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
