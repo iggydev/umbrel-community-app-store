@@ -1,0 +1,24 @@
+manifestVersion: 1
+id: iggydev-wordpress-staging2
+name: WordPress Staging 2
+tagline: Isolated WordPress playground and backup
+icon: https://raw.githubusercontent.com/iggydev/umbrel-community-app-store/refs/heads/master/iggydev-wordpress-staging2/wordpress.svg
+category: social
+version: "1.0.0"
+port: 8569
+description: >-
+  Isolated WordPress playground and backup with its own MariaDB database.
+developer: WordPress
+website: https://wordpress.org/
+submitter: IggyDev
+submission: https://github.com/iggydev/umbrel-community-app-store
+repo: https://github.com/WordPress/WordPress
+support: https://wordpress.org/support/forums/
+gallery:
+  - https://raw.githubusercontent.com/iggydev/umbrel-community-app-store/refs/heads/master/iggydev-wordpress-staging2/wordpress.svg
+releaseNotes: >-
+  Initial IggyDev WordPress Staging 2 app.
+dependencies: []
+path: "/wp-admin"
+defaultUsername: ""
+defaultPassword: ""
