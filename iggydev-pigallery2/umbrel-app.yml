@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: iggydev-pigallery2
+name: PiGallery2
+tagline: Fast, directory-first photo gallery
+icon: https://raw.githubusercontent.com/bpatrik/pigallery2/master/docs/assets/icon.png
+category: Photography
+version: "1.0.0"
+port: 8116
+description: >-
+  PiGallery2 photo gallery for Umbrel, using existing read-only Photo, Video
+  and Media network folders.
+developer: bpatrik
+website: https://bpatrik.github.io/pigallery2/
+submitter: IggyDev
+submission: https://github.com/iggydev/umbrel-community-app-store
+repo: https://github.com/bpatrik/pigallery2
+support: https://github.com/bpatrik/pigallery2/issues
+gallery:
+  - https://raw.githubusercontent.com/bpatrik/pigallery2/master/docs/assets/icon.png
+releaseNotes: >-
+  Initial Umbrel community app integration.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
