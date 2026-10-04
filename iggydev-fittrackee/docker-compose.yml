@@ -42,6 +42,7 @@ services:
       APP_LOG: /usr/src/app/logs/fittrackee.log
       UPLOAD_FOLDER: /usr/src/app/uploads
       STATICMAP_CACHE_DIR: /usr/src/app/.staticmap_cache
+      UI_URL: http://10.1.1.9:5000
       DATABASE_URL: postgresql://fittrackee:${APP_PASSWORD}@fittrackee-db:5432/fittrackee
     volumes:
       - ${APP_DATA_DIR}/data/uploads:/usr/src/app/uploads
