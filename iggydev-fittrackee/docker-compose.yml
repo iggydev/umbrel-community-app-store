@@ -40,7 +40,7 @@ services:
       FLASK_SKIP_DOTENV: "1"
       APP_SECRET_KEY: ${APP_PASSWORD}
       APP_LOG: /usr/src/app/logs/fittrackee.log
-      UPLOAD_FOLDER: /usr/src/app/uploads
+      UPLOAD_FOLDER: /usr/src/app
       STATICMAP_CACHE_DIR: /usr/src/app/.staticmap_cache
       UI_URL: http://umbrel.local:5000/
       DATABASE_URL: postgresql://fittrackee:${APP_PASSWORD}@fittrackee-db:5432/fittrackee
@@ -56,7 +56,7 @@ services:
       fittrackee-db:
         condition: service_healthy
     healthcheck:
-      test: ["CMD-SHELL", "wget --spider http://127.0.0.1:5000/api/check-db || exit 1]
+      test: ["CMD-SHELL", "wget --spider http://127.0.0.1:5000/api/check-db || exit 1"]
       interval: 5s
       timeout: 15s
       retries: 3
