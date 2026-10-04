@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: iggydev-tileserver-gl
+name: TileServer GL
+tagline: Self-hosted map tile server
+icon: https://raw.githubusercontent.com/iggydev/umbrel-community-app-store/refs/heads/master/iggydev-tileserver-gl/tileserver-gl.svg
+category: Utilities
+version: "1.0.0"
+port: 8080
+description: >-
+  TileServer GL serves vector and raster map tiles from MBTiles and other
+  geospatial sources.
+developer: MapTiler
+website: https://github.com/maptiler/tileserver-gl
+submitter: IggyDev
+submission: https://github.com/iggydev/umbrel-community-app-store
+repo: https://github.com/maptiler/tileserver-gl
+support: https://github.com/maptiler/tileserver-gl/issues
+gallery:
+  - https://raw.githubusercontent.com/iggydev/umbrel-community-app-store/refs/heads/master/iggydev-tileserver-gl/tileserver-gl.svg
+releaseNotes: >-
+  Initial Umbrel community app integration.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
