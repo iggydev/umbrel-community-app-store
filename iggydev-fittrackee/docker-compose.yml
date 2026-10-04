@@ -37,7 +37,11 @@ services:
       - ${APP_DATA_DIR}/data/uploads:/usr/src/app/uploads
       - ${APP_DATA_DIR}/data/staticmap_cache:/usr/src/app/.staticmap_cache
       - ${APP_DATA_DIR}/data/logs:/usr/src/app/logs
-    command: sh docker-entrypoint.sh
+    user: root
+    command: >-
+      sh -c "chown -R fittrackee:fittrackee /usr/src/app/uploads
+      /usr/src/app/.staticmap_cache /usr/src/app/logs &&
+      exec docker-entrypoint.sh"
     depends_on:
       fittrackee-db:
         condition: service_healthy
