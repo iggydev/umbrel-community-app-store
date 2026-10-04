@@ -2,7 +2,7 @@ manifestVersion: 1
 id: iggydev-mozhi
 name: Mozhi
 tagline: Privacy-friendly translation frontend
-icon: https://codeberg.org/aryak/mozhi/raw/branch/main/public/favicon.svg
+icon: https://raw.githubusercontent.com/iggydev/umbrel-community-app-store/refs/heads/master/iggydev-mozhi/mozhi.svg
 category: Utilities
 version: "1.0.0"
 port: 3000
@@ -16,7 +16,7 @@ submission: https://github.com/iggydev/umbrel-community-app-store
 repo: https://codeberg.org/aryak/mozhi
 support: https://codeberg.org/aryak/mozhi/issues
 gallery:
-  - https://codeberg.org/aryak/mozhi/raw/branch/main/public/favicon.svg
+  - https://raw.githubusercontent.com/iggydev/umbrel-community-app-store/refs/heads/master/iggydev-mozhi/mozhi.svg
 releaseNotes: >-
   Initial Umbrel community app integration.
 dependencies: []
