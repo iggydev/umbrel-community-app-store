@@ -41,7 +41,7 @@ services:
     command: >-
       sh -c "chown -R fittrackee:fittrackee /usr/src/app/uploads
       /usr/src/app/.staticmap_cache /usr/src/app/logs &&
-      exec docker-entrypoint.sh"
+      exec /usr/src/app/docker-entrypoint.sh"
     depends_on:
       fittrackee-db:
         condition: service_healthy
