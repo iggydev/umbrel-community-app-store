@@ -23,6 +23,16 @@ services:
       - internal_network
     restart: on-failure
 
+  fittrackee-init:
+    image: alpine:3.22
+    command: >-
+      sh -c "chown -R 1000:1000 /uploads /staticmap_cache /logs"
+    volumes:
+      - ${APP_DATA_DIR}/data/uploads:/uploads
+      - ${APP_DATA_DIR}/data/staticmap_cache:/staticmap_cache
+      - ${APP_DATA_DIR}/data/logs:/logs
+    restart: "no"
+
   fittrackee:
     image: fittrackee/fittrackee:v1.3.5
     environment:
@@ -38,11 +48,10 @@ services:
       - ${APP_DATA_DIR}/data/staticmap_cache:/usr/src/app/.staticmap_cache
       - ${APP_DATA_DIR}/data/logs:/usr/src/app/logs
     user: root
-    command: >-
-      sh -c "chown -R fittrackee:fittrackee /usr/src/app/uploads
-      /usr/src/app/.staticmap_cache /usr/src/app/logs &&
-      exec /usr/src/app/docker-entrypoint.sh"
+    command: sh /usr/src/app/docker-entrypoint.sh
     depends_on:
+      fittrackee-init:
+        condition: service_completed_successfully
       fittrackee-db:
         condition: service_healthy
     healthcheck:
