@@ -13,5 +13,3 @@ services:
       TZ: Europe/Zagreb
       MOZHI_DEFAULT_SOURCE_LANG: Croatian
       MOZHI_DEFAULT_PREFER_AUTODETECT: "false"
-    ports:
-      - 5555:3000
