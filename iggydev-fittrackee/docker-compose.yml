@@ -1,0 +1,57 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: iggydev-fittrackee_fittrackee_1
+      APP_PORT: 5000
+
+  fittrackee-db:
+    image: postgis/postgis:18-3.6-alpine
+    environment:
+      POSTGRES_USER: fittrackee
+      POSTGRES_PASSWORD: ${APP_PASSWORD}
+      POSTGRES_DB: fittrackee
+    volumes:
+      - ${APP_DATA_DIR}/data/db:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U fittrackee -d fittrackee"]
+      interval: 5s
+      timeout: 15s
+      retries: 3
+    networks:
+      - internal_network
+    restart: on-failure
+
+  fittrackee:
+    image: fittrackee/fittrackee:v1.3.5
+    environment:
+      FLASK_APP: fittrackee
+      FLASK_SKIP_DOTENV: "1"
+      APP_SECRET_KEY: ${APP_PASSWORD}
+      APP_LOG: /usr/src/app/logs/fittrackee.log
+      UPLOAD_FOLDER: /usr/src/app/uploads
+      STATICMAP_CACHE_DIR: /usr/src/app/.staticmap_cache
+      DATABASE_URL: postgresql://fittrackee:${APP_PASSWORD}@fittrackee-db:5432/fittrackee
+    volumes:
+      - ${APP_DATA_DIR}/data/uploads:/usr/src/app/uploads
+      - ${APP_DATA_DIR}/data/staticmap_cache:/usr/src/app/.staticmap_cache
+      - ${APP_DATA_DIR}/data/logs:/usr/src/app/logs
+    command: sh docker-entrypoint.sh
+    depends_on:
+      fittrackee-db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget --spider http://127.0.0.1:5000/api/check-db || exit 1"]
+      interval: 5s
+      timeout: 15s
+      retries: 3
+    networks:
+      - external_network
+      - internal_network
+    restart: on-failure
+
+networks:
+  external_network:
+  internal_network:
+    internal: true
