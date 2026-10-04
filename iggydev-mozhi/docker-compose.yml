@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: iggydev-mozhi_mozhi_1
+      APP_PORT: 3000
+
+  mozhi:
+    image: codeberg.org/aryak/mozhi:latest
+    restart: unless-stopped
+    environment:
+      TZ: Europe/Zagreb
+      MOZHI_DEFAULT_SOURCE_LANG: Croatian
+      MOZHI_DEFAULT_PREFER_AUTODETECT: "false"
+    ports:
+      - 5555:3000
