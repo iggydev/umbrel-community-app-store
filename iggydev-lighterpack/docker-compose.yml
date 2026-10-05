@@ -14,8 +14,7 @@ services:
       - ${APP_DATA_DIR}/data/mongodb:/data/configdb
 
   lighterpack:
-    image: lighterpack:111
-    pull_policy: never
+    image: ghcr.io/iggydev/lighterpack:111@sha256:884627d13b735fcb008c30c5e0bd65fbfdef92b6c15654b306d70bbdc14a0d5c
     restart: always
     depends_on:
       - mongodb
