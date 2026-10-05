@@ -2,52 +2,9 @@
 
 Native Umbrel app for Lighterpack.
 
-## Architecture
+A native Umbrel installation of Lighterpack using the existing AMD64 Lighterpack image and the official MongoDB 5.0 image.
 
-This app intentionally does not use Dockge or Docker-in-Docker.
+This app stores MongoDB data, gear images, and uploads in its own persistent Umbrel app-data directory.
 
-- **Lighterpack:** existing private/local image `ligterpack:111`
-- **MongoDB:** official `mongo:5.0` image for AMD64
-- **Persistent data:** Umbrel `APP_DATA_DIR`
-- **Reverse proxy:** Umbrel `app_proxy`
-
-The Lighterpack image is private and is therefore not included in this repository.
-
-## Preload the Lighterpack image
-
-The existing image must be present in the Umbrel host Docker before installing the app.
-
-If migrating from the previous Dockge/DIND installation, export it from the DIND Docker and load it into the host Docker:
-
-```bash
-sudo docker -H unix:///home/umbrel/umbrel/app-data/dockge/data/docker/docker.sock \
-  save ligterpack:111 | sudo docker load
-```
-
-Verify:
-
-```bash
-sudo docker images ligterpack --no-trunc
-```
-
-The expected image ID is:
-
-```
-sha256:1c190bdb7a08eb163e4446792d98b7afd6cf466fcbe11cafffd61e9ff60d011a
-```
-
-## Database migration
-
-Do not copy the old MongoDB WiredTiger files.
-
-Restore the known-good logical dump into the new MongoDB container instead. This avoids carrying forward the previous WiredTiger corruption.
-
-## Persistent directories
-
-The app uses:
-
-- `data/mongodb`
-- `data/images`
-- `data/uploads`
-
-The old Dockge/DIND Lighterpack installation should remain untouched until the native installation has been fully verified.
+*IMPORTANT:* This app is a private, unfinished personal modification of Lighterpack and is NOT intended for public redistribution or general use.
+The container image is private. Do not redistribute, mirror, or share the image without the author's permission.
