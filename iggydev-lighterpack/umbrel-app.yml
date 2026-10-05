@@ -1,0 +1,30 @@
+manifestVersion: 1.1
+id: iggydev-lighterpack
+category: utilities
+name: Lighterpack
+version: "1.0.0"
+tagline: Lightweight gear list manager
+description: >-
+  A native Umbrel installation of Lighterpack using the existing AMD64
+  Lighterpack image and the official MongoDB 5.0 image.
+
+  This app stores MongoDB data, gear images, and uploads in its own persistent
+  Umbrel app-data directory.
+
+  The Lighterpack image is private/local and must be preloaded into the Umbrel
+  host Docker before installing this app.
+website: https://lighterpack.com
+dependencies: []
+repo: https://github.com/iggydev/umbrel-community-app-store
+support: https://github.com/iggydev/umbrel-community-app-store/issues
+port: 3000
+icon: https://raw.githubusercontent.com/iggydev/umbrel-community-app-store/master/iggydev-lighterpack/icon.svg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+releaseNotes: >-
+  Initial native Umbrel app. Uses the official MongoDB 5.0 AMD64 image and the
+  existing local Lighterpack image.
+developer: IggyDev
+submitter: IggyDev
+submission: https://github.com/iggydev/umbrel-community-app-store
