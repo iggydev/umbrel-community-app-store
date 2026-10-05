@@ -11,8 +11,10 @@ description: >-
   This app stores MongoDB data, gear images, and uploads in its own persistent
   Umbrel app-data directory.
 
-  The Lighterpack image is private/local and must be preloaded into the Umbrel
-  host Docker before installing this app.
+  IMPORTANT: This app is a private, unfinished personal modification of
+  Lighterpack and is NOT intended for public redistribution or general use.
+  The container image is private. Do not redistribute, mirror, or share the
+  image without the author's permission.
 website: https://lighterpack.com
 dependencies: []
 repo: https://github.com/iggydev/umbrel-community-app-store
@@ -23,8 +25,8 @@ path: ""
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: >-
-  Initial native Umbrel app. Uses the official MongoDB 5.0 AMD64 image and the
-  existing local Lighterpack image.
+  Initial native Umbrel app. Uses the official MongoDB 5.0 AMD64 image and a
+  private custom Lighterpack image.
 developer: IggyDev
 submitter: IggyDev
 submission: https://github.com/iggydev/umbrel-community-app-store
