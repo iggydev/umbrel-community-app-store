@@ -18,7 +18,7 @@ dependencies: []
 repo: https://github.com/iggydev/umbrel-community-app-store
 support: https://github.com/iggydev/umbrel-community-app-store/issues
 port: 3000
-icon: https://raw.githubusercontent.com/iggydev/umbrel-community-app-store/master/iggydev-lighterpack/icon.svg
+icon: https://raw.githubusercontent.com/iggydev/umbrel-community-app-store/master/iggydev-lighterpack/lighterpack_160.png
 path: ""
 defaultUsername: ""
 defaultPassword: ""
