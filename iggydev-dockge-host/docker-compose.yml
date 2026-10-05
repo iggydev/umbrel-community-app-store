@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: iggydev-dockge-host_dockge_1
+      APP_PORT: 5001
+
+  dockge:
+    image: louislam/dockge:1.5.0@sha256:335c6368b880ecc203236ed89e6e5232e0d6578e8ef5920e4a502390451502bf
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${APP_DATA_DIR}/data/dockge-data:/app/data
+
+      # IMPORTANT: The path inside the container must exactly match the host path.
+      # This is what lets Docker Compose bind mounts resolve on the host.
+      - /home/umbrel/umbrel/app-data/dockge/data/dockge-stacks:/home/umbrel/umbrel/app-data/dockge/data/dockge-stacks
+
+    environment:
+      DOCKGE_STACKS_DIR: /home/umbrel/umbrel/app-data/dockge/data/dockge-stacks
+      DOCKGE_ENABLE_CONSOLE: "true"
