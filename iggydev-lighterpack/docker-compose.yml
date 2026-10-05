@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: iggydev-lighterpack_lighterpack_1
+      APP_PORT: 3000
+
+  mongodb:
+    image: mongo:5.0
+    restart: always
+    volumes:
+      - ${APP_DATA_DIR}/data/mongodb:/data/db
+      - ${APP_DATA_DIR}/data/mongodb:/data/configdb
+
+  lighterpack:
+    image: ligterpack:111
+    pull_policy: never
+    restart: always
+    depends_on:
+      - mongodb
+    volumes:
+      - ${APP_DATA_DIR}/data/images:/var/www/lighterpack/public/gear
+      - ${APP_DATA_DIR}/data/uploads:/var/www/lighterpack/public/uploads
