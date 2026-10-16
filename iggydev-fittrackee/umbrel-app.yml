@@ -4,7 +4,7 @@ name: FitTrackee
 tagline: Self-hosted outdoor activity tracker
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/fittrackee.svg
 category: Fitness
-version: "1.3.5"
+version: "1.3.6"
 port: 5000
 description: >-
   FitTrackee is a self-hosted outdoor activity tracker for GPX workouts,
